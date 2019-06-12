@@ -1,8 +1,8 @@
 #ifndef MENUSCENE_H
 #define MENUSCENE_H
 
-#include "core/Scene.h"
-#include "menu/Menu.h"
+#include "../core/Scene.h"
+#include "../menu/Menu.h"
 
 
 class MenuScene : public Scene
@@ -17,6 +17,7 @@ class MenuScene : public Scene
         virtual void load();
         virtual void unload();
         virtual void update(int dt);
+        void input();
 
 
     private:

@@ -1,9 +1,10 @@
 #include "MenuScene.h"
-#include "core/Game.h"
+#include "../core/Game.h"
 
-#include "menu/SousMenu.h"
-#include "menuItem/Quit.h"
-#include "menuItem/Continue.h"
+#include "../menu/SousMenu.h"
+#include "../menuItem/Quit.h"
+#include "../menuItem/Continue.h"
+#include "../menuItem/FullScreen.h"
 
 
 #include <iostream>
@@ -27,9 +28,9 @@ MenuScene::~MenuScene()
 void MenuScene::load()
 {
     mPrincipal= new Menu(200,100,menuFont,50);
-    mPrincipal->addElement(new Continue("Continuer"));
-
-    mPrincipal->addElement(new Quit("Quiter"));
+    mPrincipal->addElement(new Continue("Continue"));
+    mPrincipal->addElement(new FullScreen("Full Screen"));
+    mPrincipal->addElement(new Quit("Quit"));
     Menu::setMenuActif(mPrincipal);
     setRGB(50,100,100);
     if(parent()){
@@ -42,7 +43,8 @@ void MenuScene::unload()
 
 }
 
-void MenuScene::update(int dt)
+
+void MenuScene::input()
 {
     switch(event.type)
     {
@@ -73,9 +75,24 @@ void MenuScene::update(int dt)
                     Menu::setMenuActif(Menu::menuActif()->menuParent());
                     break;
             }
-        break;
+            break;
+        case SDL_MOUSEBUTTONDOWN  :
+                switch(event.button.button)//  Gestion des bouton souris
+                {
+                    case SDL_BUTTON_LEFT:
+                        event.button.button=0;
+                        Menu::activation();// a optimiser fonctionne en dehor du menu
+                        break;
+                }
+                break;
+        case SDL_MOUSEMOTION:
+                Menu::menuActif()->onMouse(event.motion.x,event.motion.y);
+            break;
     }
+}
 
+void MenuScene::update(int dt)
+{
     int returnVal =0;
     returnVal = Menu::updateMenu(returnVal);
     if(returnVal==PLAY){
