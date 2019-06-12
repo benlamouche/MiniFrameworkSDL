@@ -87,6 +87,10 @@
 		</Linker>
 		<Unit filename="MyGame.cpp" />
 		<Unit filename="MyGame.h" />
+		<Unit filename="Scene/MenuScene.cpp" />
+		<Unit filename="Scene/MenuScene.h" />
+		<Unit filename="Scene/ScreenMessage.cpp" />
+		<Unit filename="Scene/ScreenMessage.h" />
 		<Unit filename="Scene/TestScene.cpp" />
 		<Unit filename="Scene/TestScene.h" />
 		<Unit filename="constante.h" />
@@ -101,6 +105,10 @@
 		<Unit filename="gfx/SDL2_rotozoom.h" />
 		<Unit filename="menuItem/Continue.cpp" />
 		<Unit filename="menuItem/Continue.h" />
+		<Unit filename="menuItem/FullScreen.cpp" />
+		<Unit filename="menuItem/FullScreen.h" />
+		<Unit filename="menuItem/LoachMenu.cpp" />
+		<Unit filename="menuItem/LoachMenu.h" />
 		<Unit filename="menuItem/Quit.cpp" />
 		<Unit filename="menuItem/Quit.h" />
 		<Unit filename="menu/ElementMenu.cpp" />

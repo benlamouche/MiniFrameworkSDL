@@ -22,10 +22,13 @@ class Game
         Scene* currentScene(){return m_currentScene;}
         void setCurrentScene(Scene* scene){m_currentScene=scene;}
 
+        void switchFullScreen();
+
     protected:
 
         int m_status;
         Scene* m_currentScene;
+        bool FullScreen;
 
     private:
 };

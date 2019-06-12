@@ -13,6 +13,7 @@ SDL_Window *ecran = NULL;//  chargé en variable globale pour simplifier la synta
 
 Game::Game():m_status(PLAY)
 {
+    FullScreen=false;
     //ctor
     initSDL();
 
@@ -72,5 +73,16 @@ void Game::initSDL()
     if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024)==-1) {
         cerr<<"Mix_OpenAudio: %s\n"<< Mix_GetError()<<endl;
         exit(2);
+    }
+}
+
+void Game::switchFullScreen()
+{
+    if(FullScreen){
+        FullScreen=false;
+        SDL_SetWindowFullscreen(ecran,0);
+    }else{
+        FullScreen=true;
+        SDL_SetWindowFullscreen(ecran,SDL_WINDOW_FULLSCREEN);
     }
 }
