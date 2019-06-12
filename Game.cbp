@@ -87,8 +87,6 @@
 		</Linker>
 		<Unit filename="MyGame.cpp" />
 		<Unit filename="MyGame.h" />
-		<Unit filename="Scene/GameOver.cpp" />
-		<Unit filename="Scene/GameOver.h" />
 		<Unit filename="Scene/TestScene.cpp" />
 		<Unit filename="Scene/TestScene.h" />
 		<Unit filename="constante.h" />
