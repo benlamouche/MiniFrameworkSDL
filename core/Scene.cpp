@@ -26,7 +26,10 @@ void Scene::exec()
         dt=currentTime - lastTime;
         lastTime = currentTime;
 
-        SDL_PollEvent(&event);
+        while(SDL_PollEvent(&event))
+        {
+            input();
+        }
         update(dt);//UPDATE
 
         if(game->status()==QUIT)loop = 0;//GESTION QUIT GAME
@@ -58,6 +61,11 @@ void Scene::load()
 }
 
 void Scene::unload()
+{
+
+}
+
+void Scene::input()
 {
 
 }

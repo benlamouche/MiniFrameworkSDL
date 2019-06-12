@@ -27,6 +27,7 @@ class Scene
     protected:
         virtual void load();
         virtual void unload();
+        virtual void input();
         virtual void update(int dt);
 
         bool loop;
