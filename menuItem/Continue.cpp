@@ -1,4 +1,5 @@
 #include "Continue.h"
+#include "../core/Game.h"
 
 
 Continue::Continue(const char* name):ElementMenu(name)
@@ -15,6 +16,6 @@ Continue::~Continue()
 
 int Continue::action(int val)
 {
-    return PLAY;
+    return Game::PLAY;
 }
 

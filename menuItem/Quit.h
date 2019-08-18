@@ -2,7 +2,6 @@
 #define QUITITEM_H
 
 #include "../menu/ElementMenu.h"
-#include "../constante.h"
 
 
 class Quit :public ElementMenu

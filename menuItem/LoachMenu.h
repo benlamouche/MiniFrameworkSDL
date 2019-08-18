@@ -3,8 +3,6 @@
 
 #include "../menu/ElementMenu.h"
 #include "../menu/Menu.h"
-#include "../constante.h"
-
 
 class LoachMenu :public ElementMenu
 {

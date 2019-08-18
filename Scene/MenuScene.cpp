@@ -95,11 +95,11 @@ void MenuScene::update(int dt)
 {
     int returnVal =0;
     returnVal = Menu::updateMenu(returnVal);
-    if(returnVal==PLAY){
+    if(returnVal == Game::PLAY){
         loop = 0;
     }
 
-    if(game->status()==QUIT)loop = 0;
+    if(game->status() == Game::QUIT)loop = 0;
 }
 
 void MenuScene::draw()

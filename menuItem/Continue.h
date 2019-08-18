@@ -2,8 +2,6 @@
 #define CONTINUEITEM_H
 
 #include "../menu/ElementMenu.h"
-#include "../constante.h"
-
 
 class Continue :public ElementMenu
 {

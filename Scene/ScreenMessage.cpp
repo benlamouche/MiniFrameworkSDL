@@ -47,7 +47,7 @@ void ScreenMessage::update(int dt)
     delay--;
 
     if (delay <= 0)loop=0;
-    if(game->status()==QUIT)loop = 0;
+    if(game->status() == Game::QUIT)loop = 0;
 }
 
 void ScreenMessage::draw()

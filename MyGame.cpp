@@ -1,7 +1,6 @@
 #include "MyGame.h"
 
 #include <iostream>
-#include "constante.h"
 #include "util/benrandom.h"
 #include "menu/SousMenu.h"
 #include "menuItem/Quit.h"

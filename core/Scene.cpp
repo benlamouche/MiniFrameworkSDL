@@ -32,7 +32,7 @@ void Scene::exec()
         }
         update(dt);//UPDATE
 
-        if(game->status()==QUIT)loop = 0;//GESTION QUIT GAME
+        if(game->status()== Game::QUIT)loop = 0;//GESTION QUIT GAME
 
         //********** DRAW ***********
         if(loop)

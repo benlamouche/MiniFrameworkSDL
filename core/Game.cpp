@@ -11,7 +11,7 @@ using namespace std;
 
 SDL_Window *ecran = NULL;//  chargé en variable globale pour simplifier la syntaxe
 
-Game::Game():m_status(PLAY)
+Game::Game(int screenW ,int screenH ):m_status(PLAY),m_screenW(screenW),m_screenH(screenH)
 {
     FullScreen=false;
     //ctor
@@ -19,9 +19,9 @@ Game::Game():m_status(PLAY)
 
     // **************************************** INIT ECRAN ****************************
     ecran = SDL_CreateWindow("Game",
-                          SDL_WINDOWPOS_UNDEFINED,
-                          SDL_WINDOWPOS_UNDEFINED,
-                          WECRAN, HECRAN,
+                          SDL_WINDOWPOS_CENTERED,
+                          SDL_WINDOWPOS_CENTERED,
+                          screenW, screenH,
                           SDL_WINDOW_OPENGL);
 }
 

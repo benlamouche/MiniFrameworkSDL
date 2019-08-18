@@ -2,8 +2,6 @@
 #define FULLSCREENITEM_H
 
 #include "../menu/ElementMenu.h"
-#include "../constante.h"
-
 
 class FullScreen :public ElementMenu
 {

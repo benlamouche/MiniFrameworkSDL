@@ -2,7 +2,6 @@
 #define SCREENMESSAGE_H
 
 #include "../core/Scene.h"
-#include "../constante.h"
 
 class ScreenMessage : public Scene
 {

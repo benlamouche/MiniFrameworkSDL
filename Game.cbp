@@ -93,7 +93,6 @@
 		<Unit filename="Scene/ScreenMessage.h" />
 		<Unit filename="Scene/TestScene.cpp" />
 		<Unit filename="Scene/TestScene.h" />
-		<Unit filename="constante.h" />
 		<Unit filename="core/Game.cpp" />
 		<Unit filename="core/Game.h" />
 		<Unit filename="core/Scene.cpp" />
