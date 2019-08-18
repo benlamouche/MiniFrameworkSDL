@@ -26,17 +26,28 @@ void TestScene::unload()
     std::cerr<<"unload"<<std::endl;
 }
 
-void TestScene::update(int dt)
+void TestScene::input()
 {
-        switch(event.type)
+    switch(event.type)
         {
             case SDL_QUIT:
                 game->quit();
                 break;
             case SDL_KEYDOWN:
-                game->quit();
-                break;
+                switch(event.key.keysym.sym)//  Gestion des touches du clavier
+                {
+                    case SDLK_ESCAPE:
+                        event.key.keysym.sym=0;//evite les pb de repetition de touche
+                        game->quit();
+                        break;
+                }
         }
+
+}
+
+void TestScene::update(int dt)
+{
+
 }
 
 void TestScene::draw()
