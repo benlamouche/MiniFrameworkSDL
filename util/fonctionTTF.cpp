@@ -8,23 +8,23 @@
     SDL_Color JAUNE  = {255,255,0};
     SDL_Color ROUGE  = {255,0,0};
 
- void afficheTexte(SDL_Rect position,const char *txt,SDL_Window *ecran,TTF_Font *police,SDL_Color color)
- {
-     static SDL_Surface *texte;
+void afficheTexte(SDL_Rect position,const char *txt,SDL_Window *ecran,TTF_Font *police,SDL_Color color)
+{
+    SDL_Surface *texte;
+    texte=TTF_RenderText_Blended(police,txt,color);
+    SDL_UpperBlit(texte,NULL,SDL_GetWindowSurface(ecran),&position);
+    SDL_FreeSurface(texte);
+}
 
-     texte=TTF_RenderText_Blended(police,txt,color);
-     SDL_UpperBlit(texte,NULL,SDL_GetWindowSurface(ecran),&position);
- }
-
- void afficheInt(SDL_Rect position,int nombre,SDL_Window *ecran,TTF_Font *police,SDL_Color color)
- {
-     static char txt[10];
-     sprintf(txt,"%d",nombre);
-     afficheTexte(position,txt,ecran,police,color);
- }
+void afficheInt(SDL_Rect position,int nombre,SDL_Window *ecran,TTF_Font *police,SDL_Color color)
+{
+    char txt[10];
+    sprintf(txt,"%d",nombre);
+    afficheTexte(position,txt,ecran,police,color);
+}
 void afficheIntSurInt(SDL_Rect position,int nombre1,int nombre2,SDL_Window *ecran,TTF_Font *police,SDL_Color color)
- {
-     static char txt[10];
-     sprintf(txt,"%d/%d",nombre1, nombre2);
-     afficheTexte(position,txt,ecran,police,color);
- }
+{
+    char txt[10];
+    sprintf(txt,"%d/%d",nombre1, nombre2);
+    afficheTexte(position,txt,ecran,police,color);
+}

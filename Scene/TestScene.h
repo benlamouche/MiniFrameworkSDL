@@ -17,6 +17,7 @@ class TestScene : public Scene
         virtual void draw();
     private:
         bool menu;
+        bool message;
         SDL_Surface *lune;
 };
 

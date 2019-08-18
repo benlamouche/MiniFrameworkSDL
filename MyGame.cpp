@@ -35,7 +35,7 @@ MyGame::MyGame()
 // ***********  CHARGEMENT FONT **********************************
 
     numberFont=TTF_OpenFont("data/Fette.ttf",15);
-    texteFont=TTF_OpenFont("data/Augusta.ttf",20);
+    texteFont=TTF_OpenFont("data/Augusta.ttf",80);
     menuFont=TTF_OpenFont("data/Fette.ttf",30);
 
 
