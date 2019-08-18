@@ -1,5 +1,6 @@
 #include "TestScene.h"
 #include "../core/Game.h"
+#include "MenuScene.h"
 
 #include <iostream>
 
@@ -16,6 +17,7 @@ TestScene::~TestScene()
 
 void TestScene::load()
 {
+    menu=false;
     lune= IMG_Load("data/sprite/lune.png");
     std::cerr<<"load"<<std::endl;
 }
@@ -38,7 +40,7 @@ void TestScene::input()
                 {
                     case SDLK_ESCAPE:
                         event.key.keysym.sym=0;//evite les pb de repetition de touche
-                        game->quit();
+                        menu=true;
                         break;
                 }
         }
@@ -47,7 +49,10 @@ void TestScene::input()
 
 void TestScene::update(int dt)
 {
-
+    if(menu){
+        MenuScene::loach(this);
+        menu=false;
+    }
 }
 
 void TestScene::draw()
