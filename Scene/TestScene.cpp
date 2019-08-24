@@ -4,6 +4,7 @@
 #include "ScreenMessage.h"
 
 #include <iostream>
+extern Game* game;
 
 TestScene::TestScene()
 {

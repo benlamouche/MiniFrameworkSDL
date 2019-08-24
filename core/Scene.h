@@ -8,7 +8,6 @@
 
 extern SDL_Window *ecran;//  main.cpp
 class Game;
-extern Game* game;
 class Scene
 {
     public:
